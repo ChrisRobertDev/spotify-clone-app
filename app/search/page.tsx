@@ -2,6 +2,7 @@ import getSongsByTitle from "@/actions/getSongsByTitle";
 import { Header, SearchInput } from "@/components";
 import SearchContent from "./components/SearchContent";
 
+export const revalidate = 0;
 interface SearchProps {
   searchParams: {
     title: string;
