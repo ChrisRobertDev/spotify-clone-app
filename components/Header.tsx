@@ -9,6 +9,7 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useUser } from "@/hooks/useUser";
 import { FaUserAlt } from "react-icons/fa";
 import { toast } from "react-hot-toast";
+import { twMerge } from "tailwind-merge";
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -37,7 +38,12 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
   };
 
   return (
-    <div className={`h-fit bg-gradient-to-b from-emerald-800 p-6 ${className}`}>
+    <div
+      className={twMerge(
+        `h-fit bg-gradient-to-b from-emerald-800 p-6`,
+        className
+      )}
+    >
       <div className="w-full mb-4 flex items-center justify-between">
         <div className="hidden md:flex gap-x-2 items-center">
           <button
