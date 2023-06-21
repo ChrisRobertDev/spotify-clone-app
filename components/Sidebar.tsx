@@ -10,7 +10,7 @@ import { twMerge } from "tailwind-merge";
 
 interface SidebarProps {
   children: React.ReactNode;
-  songs: Song;
+  songs: Song[];
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
